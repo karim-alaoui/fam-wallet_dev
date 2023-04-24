@@ -1,0 +1,22 @@
+.c-flashMsg-cont {
+    padding: 13px 0 12px;
+    text-align: center;
+  
+    &.is-hidden {
+      display: none;
+    }
+  
+    &.is-success {
+        background-color: #f7f2e5;
+    }
+  
+    &.is-error {
+      background-color: #ffbebc;
+    }
+  
+    .c-flashMsg-txt {
+      color: #333;
+      font-size: 14px;
+      letter-spacing: 0.7px;
+    }
+}

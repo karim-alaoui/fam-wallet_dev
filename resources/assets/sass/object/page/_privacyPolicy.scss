@@ -1,0 +1,115 @@
+.p-privacyPolicy {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-privacyPolicy__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-privacyPolicy__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-privacyPolicy__content {
+    padding-top: 24px;
+}
+.p-privacyPolicy__listItem {
+    position: relative;
+    width: 100%;
+    padding: 17px;
+    background-color: $colorWhite;
+    cursor: pointer;
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBorder;
+    }
+    &.is-active {
+        .p-privacyPoricy__sign {
+            span:last-child {
+                height: 0;
+            }
+        }
+    }
+}
+.p-privacyPolicy__heading {
+    @extend .u-fs-12;
+}
+.p-privacyPoricy__sign {
+    position: absolute;
+    top: 50%;
+    right: 8px;
+    transform: translateY(-50%);
+    width: 16px;
+    height: 16px;
+    span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        &:first-child {
+            width: 12px;
+            height: 0;
+        }
+        &:last-child {
+            width: 0;
+            height: 12px;
+        }
+    }
+}
+.p-privacyPolicy__item__content {
+    display: none; //非表示
+    padding: 16px 16px 26px;
+    background-color: $colorWhite;
+    &.is-active {
+        display: block;
+    }
+}
+.p-privacyPolicy__item__heading {
+    @extend .u-fs-12, .u-fw-b;
+    margin: 24px 0 10px;
+}
+.p-privacyPolicy__item__text {
+    @extend .u-fs-12;
+}
+.p-privacyPolicy__item__list {
+    padding-left: 16px;
+}
+.p-privacyPolicy__item__listItem {
+    @extend .u-fs-12;
+}
+.p-privacyPolicy__btn {
+    @extend .u-fs-12;
+    position: relative;
+    width: 58px;
+    margin: 26px auto 0;
+    color: $colorBlue;
+    text-align: center;
+    cursor: pointer;
+}
+.p-privacyPolicy__btn__close {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-250%,-50%);
+    width: 16px;
+    height: 16px;
+    span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 12px;
+        height: 0;
+        border: 1px solid $colorBlue;
+        border-radius: 4px;
+        &:first-child {
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        &:last-child {
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }
+}

@@ -1,0 +1,178 @@
+.p-leaderEdit {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-leaderEdit__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-leaderEdit__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-leaderEdit__account {
+    margin-top: 24px;
+    padding: 13px 16px;
+    background-color: $colorWhite;
+}
+.p-leaderEdit__account__name {
+    @extend  .u-fs-13, .u-fw-b;
+}
+.p-leaderEdit__account__email {
+    @extend .u-fs-11;
+    position: relative;
+    margin-top: 3px;
+    padding-left: 20px;
+    color: $colorGray;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 9px;
+        background-image: url("/img/icon/icon_mail.png");
+        background-size: contain;
+    }
+
+}
+.p-leaderEdit__contents {
+    padding: 9px 16px 0;
+}
+.p-leaderEdit__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+.p-leaderEdit__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-leaderEdit__form__select__wrap {
+    position: relative;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+}
+.p-leaderEdit__form__select {
+    @extend .u-fs-14;
+    display: inline-block;
+    width: 100%;
+    padding: 9px 12px;
+
+}
+.p-leaderEdit__form__checkbox__wrap {
+    @extend .u-fs-11;
+    margin-top: 9px;
+}
+.p-leaderEdit__form__checkbox__list {
+    border: 1px solid $colorBorder;
+}
+.p-leaderEdit__form__checkbox__listItem {
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBorder;
+    }
+}
+.p-leaderEdit__form__checkbox__label {
+    label {
+        @extend .u-fs-14;
+        position: relative;
+        display: inline-block;
+        word-break: break-all;
+        width: 100%;
+        padding: 10px 12px 7px 40px;
+        background-color: $colorWhite;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 1px solid $colorBorder;
+            border-radius: 50%;
+            background-color: $colorWhite;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 48%;
+            left: 19px;
+            width: 5px;
+            height: 8px;
+            transform: translateY(-50%) rotate(40deg);
+            border-bottom: 1px solid $colorBorder;
+            border-right: 1px solid $colorBorder;
+        }
+        &.is-check {
+            background-color: $colorClick;
+            &::before{
+                background-color: $colorOrange;
+            }
+            &::after{
+                border-bottom: 1px solid $colorWhite;
+                border-right: 1px solid $colorWhite;
+            }
+        }
+    }
+}
+.p-leaderEdit__form__btn {
+    margin-top: 16px;
+}
+.p-leaderEdit__delete__wrap {
+    margin-top: 20px;
+    padding: 16px 0;
+    border-top: 1px solid $colorBorder;
+    text-align: center;
+}
+.p-leaderEdit__delete {
+    @extend .u-fs-12;
+    color: $colorRed;
+}
+.p-leaderEdit__overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.6);
+}
+.p-leaderEdit__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 256px;
+    padding: 18px 24px 24px;
+    background-color: $colorWhite;
+}
+.p-leaderEdit__modal__heading {
+    @extend .u-fs-14;
+    font-weight: 600;
+}
+.p-leaderEdit__modal__btn__wrap {
+    display: flex;
+    margin-top: 13px;
+}
+.p-leaderEdit__modal__btn {
+    &:not(:first-child) {
+        margin-left: 12px;
+    }
+}

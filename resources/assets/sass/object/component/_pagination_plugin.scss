@@ -1,0 +1,44 @@
+.paginationjs-pages {
+    
+  }
+.paginationjs-prev {
+    width: 28%;
+    padding: 11px 0;
+    border-right: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
+.paginationjs-next {
+    width: 28%;
+    padding: 11px 0;
+    border-left: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
+.paginationjs-page {
+    padding: 11px 0;
+    text-align: center;
+    display: inline-block;
+    width: 30px;
+    &.active,
+    &.disabled,
+    &.ellipsis {
+    color: #a4a9aa;
+    }
+}
+.paginationjs-ellipsis {
+    padding: 7px 0;
+    text-align: center;
+    > li{
+        display: inline-block;
+        width: 30px;
+        &:not(:first-child):not(:last-child) {
+            padding-top: 1px;
+        }
+        &.active,
+        &.disabled,
+        &.ellipsis {
+        color: #a4a9aa;
+        }
+    }
+}

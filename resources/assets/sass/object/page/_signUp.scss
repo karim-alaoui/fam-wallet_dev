@@ -1,0 +1,114 @@
+.p-signUp {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-signUp__title__wrap {
+    padding: 12px 0;
+    background-color: $colorWhite;
+}
+.p-signUp__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-signUp__contents {
+    padding: 21px 16px 0;
+}
+.p-signUp__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 9px;
+    }
+}
+.p-signUp__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-signUp__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    margin-top: 1px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-signUp__form__note {
+    @extend .u-fs-11;
+    margin-top: 3px;
+    color: $colorThinGray;
+}
+.p-signUp__form__checkbox__wrap {
+    @extend .u-fs-11;
+    margin-top: 12px;
+}
+.p-signUp__form__checkbox__input {
+    &:checked + .p-signUp__form__checkbox__label::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 5px;
+        height: 8px;
+        transform: rotate(40deg);
+        border-bottom: 1px solid $colorWhite;
+        border-right: 1px solid $colorWhite;
+    }
+    &:checked + .p-signUp__form__checkbox__label::before {
+        background-color: $colorOrange;
+    }
+}
+.p-signUp__form__checkbox__label {
+    position: relative;
+    padding-left: 20px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -2px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        border: 2px solid $colorBorder;
+        border-radius: 2px;
+        background-color: $colorWhite;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 2px;
+        left: 5px;
+        width: 5px;
+        height: 8px;
+        transform: rotate(40deg);
+        border-bottom: 1px solid $colorWhite;
+        border-right: 1px solid $colorWhite;
+    }
+    &.is-check {
+        &::before{
+            background-color: $colorOrange;
+        }
+        &::after{
+            border-bottom: 1px solid $colorWhite;
+            border-right: 1px solid $colorWhite;
+        }
+    }
+    >a {
+        color: $colorBlue;
+    }
+}
+.p-signUp__form__btn {
+    margin-top: 16px;
+}
+
+.p-signUp__link {
+    @extend .u-fs-12;
+    color: $colorBlue;
+    margin-top: 9px;
+    text-align: center;
+    >a {
+        color: $colorBlue;
+        padding-bottom: 2px;
+        border-bottom: 1px solid;
+    }
+}

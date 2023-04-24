@@ -1,0 +1,47 @@
+{
+  "formatVersion" : 1,
+  "passTypeIdentifier" : "pass.wallet.maisonmarc",
+  "serialNumber" : "p69f2J",
+  "teamIdentifier" : "YPR76X4SRT",
+  "webServiceURL" : "https://example.com/passes/",
+  "authenticationToken" : "vxwxd7J8AlNNFPS8k0a0FfUFtq0ewzFdc",
+  "locations" : [
+    {
+      "latitude" : 35.684986,
+      "longitude" : 139.728026,
+      "relevantText" : "スタンプカードです"
+    }
+  ],
+  "beacons":[
+    {
+      "proximityUUID":"48534442-4C45-4144-80C0-1800ffffffff",
+      "relevantText":"ビーコンです"
+    }
+  ],
+  "barcode" : {
+    "message" : "5647382910192837465",
+    "format" : "PKBarcodeFormatQR",
+    "messageEncoding" : "iso-8859-1",
+  },
+  "organizationName" : "Organic Produce",
+  "description" : "Organic Produce Loyalty Card",
+  "logoText" : "Organic Produce",
+  "foregroundColor" : "rgb(255, 255, 255)",
+  "backgroundColor" : "rgb(55, 117, 50)",
+  "storeCard" : {
+    "auxiliaryFields" : [
+      {
+        "key" : "Current",
+        "label" : "現在",
+        "value" : "1"
+      }
+    ],
+    "secondaryFields" : [
+      {
+        "key" : "benefits",
+        "label" : "次の特典まで",
+        "value" : "8"
+      }
+    ]
+  }
+}

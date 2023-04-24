@@ -1,0 +1,218 @@
+.p-userTop__header {
+    background: url("/img/bg.png") no-repeat center;
+    width: 100%;
+    background-size: cover;
+    margin-top: -50px;
+    height: 230px;
+    position: relative;
+    background-color: $colorBg
+}
+.p-userTop__header__bottom {
+    width: 100%;
+    border-bottom: solid 20px #f9ecb6;
+}
+.p-userTop__header__title {
+    @extend .u-fs-20, .u-lh-150;
+    color: $colorWhite;
+    text-align: center;
+}
+.p-userTop__header__btn__box {
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    top: 100px;
+    width: 100%;
+    min-height: 16px;
+}
+.p-userTop__header__btn {
+    min-width: 140px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: $colorWhite;
+    margin-left: 20px;
+    margin-right: 18px;
+    &:not(:first-child) {
+        margin-left: 0px;
+    }
+    >a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding: 12px 0 9px;
+    }
+}
+.p-userTop__header__btn__img {
+    width: 32px;
+    margin: 0 auto;
+}
+.p-userTop__header__btn__heading {
+    @extend .u-fs-14;
+    margin-top: 7px;
+    text-align: center;
+}
+.p-userTop__contents {
+    min-height: calc(100vh - 80px);
+    padding:16px 16px 0;
+    background-color: $colorBg;
+}
+.p-userTop__heading {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-userTop__list {
+    display: flex;
+    margin-top: 8px;
+}
+.p-userTop__listItem {
+    @extend .u-fs-12;
+    padding: 3px 16px;
+    border-radius: 12px;
+    background-color: #eee;
+    color: $colorThinGray;
+    &:not(:first-child) {
+        margin-left: 4px;
+    }
+    &.is-active {
+        position: relative;
+        background-color: $colorWhite;
+        color: $colorOrange;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 24px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-style: solid;
+            border-width: 6px 5px 0 5px;
+            border-color: $colorWhite transparent transparent transparent;
+        }
+    }
+}
+.p-userTop__content {
+    display: none;
+    margin-top: 8px;
+    &.is-active {
+        display: block;
+    }
+}
+.p-userTop__ticket {
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+    background-color: $colorWhite;
+    &::before,&::after {
+        content: "";
+        display: block;
+        position: absolute;
+        right: 25%;
+        transform: translateX(50%);
+        width: 16px;
+        height: 8px;
+        background-color: $colorBg;
+    }
+    &::before {
+        top: 0;
+        border-radius: 0 0 100px 100px;
+    }
+    &::after {
+        bottom: 0;
+        border-radius: 100px 100px 0 0;
+    }
+    &:not(:first-child) {
+        margin-top: 4px;
+    }
+}
+.p-userTop__ticket__content {
+    width: 75%;
+    padding: 9px 12px;
+    background-size: 50% 50%;
+}
+.p-userTop__ticket__heading {
+    @extend .u-fs-13, .u-lh-16;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 600;
+}
+.p-userTop__ticket__shop {
+    @extend .u-fs-10, .u-lh-13;
+    margin-top: 4px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space:nowrap;
+    color: $colorThinGray;
+}
+.p-userTop__ticket__price {
+    color: $colorRed;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+    display: inline-block;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+.p-userTop__ticket__price__text {
+    margin-top: 7px;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    color: $colorGray;
+    display: inline-block;
+    text-align: right;
+}
+.p-userTop__ticket__use {
+    width: 25%;
+    padding: 17px 14px;
+    border-left: 1px dashed $colorBorder;
+}
+.p-userTop__ticket__text {
+    @extend .u-fs-10;
+    color: $colorGray;
+    text-align: center;
+}
+.p-userTop__ticket__num {
+    @extend .u-fs-20;
+    margin-top: 11px;
+    color: $colorOrange;
+    text-align: center;
+    word-wrap: break-word;
+}
+.p-userTop__card {
+    &:not(:first-child) {
+        margin-top: 4px;
+    }
+}
+.p-userTop__card__top {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: rgba($colorOrange, 0.2);
+}
+.p-userTop__card__img {
+    width: 32px;
+}
+.p-userTop__card__top__wrap {
+    margin-left: 8px;
+
+}
+.p-userTop__card__shop {
+    @extend .u-fs-13, .u-lh-16, .u-fw-b;
+}
+.p-userTop__card__date {
+    @extend .u-fs-10, .u-lh-13;
+    color: $colorThinGray;
+}
+.p-userTop__card__bottom {
+    padding: 5px 12px;
+    margin-bottom: 5px;
+    background-color: rgba($colorYellow, 0.1);
+}
+.p-userTop__card__dl {
+    @extend .u-fs-16, .u-lh-19;
+    color: $colorRed;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    >span {
+        @extend .u-fs-11;
+    }
+}

@@ -1,0 +1,36 @@
+.p-shopInput {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-shopInput__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-shopInput__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-shopInput__contents {
+    padding: 25px 16px 0;
+}
+.p-shopInput__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+.p-shopInput__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-shopInput__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    margin-top: 1px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-shopInput__form__btn {
+    margin-top: 16px;
+}

@@ -1,0 +1,82 @@
+.p-signIn {
+    height: 100vh;
+    padding: 40px 16px 40px;
+    background: url("/img/signin_bg.png") no-repeat center center;
+    background-size: cover;
+    // background-color: orange;
+}
+.p-signIn__heading {
+    @extend .u-fs-26,.u-lh-31, .u-fw-b;
+    color: $colorOrange;
+}
+.p-signIn__form__wrap {
+    margin-top: 24px;
+    padding: 13px 16px 21px;
+    border-radius: 10px;
+    background-color: white;
+}
+.p-signIn__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+}
+.p-signIn__form__label {
+    @extend .u-fs-12;
+    color: $colorGray;
+}
+.p-signIn__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    margin-top: 1px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-signIn__form__btn {
+    margin-top: 16px;
+}
+.p-singIn__form__link {
+    @extend .u-fs-12;
+    margin-top: 13px;
+    color: $colorBlue;
+    text-align: center;
+}
+.p-singIn__form__device__link {
+    @extend .u-fs-12;
+    margin-top: 13px;
+    color: $colorBlue;
+    text-align: center;
+    text-decoration: underline;
+}
+.p-signIn__text {
+    @extend .u-fs-10;
+    margin-top: 35px;
+    text-align: center;
+}
+.p-signIn__btn {
+    margin-top: 6px;
+}
+.p-signIn__link {
+    @extend .u-fs-12;
+    margin-top: 9px;
+    text-align: center;
+    >a {
+        padding-bottom: 2px;
+        border-bottom: 1px solid;
+    }
+}
+.p-signIn__footer {
+    margin-top: 20px;
+}
+.p-signIn__footer__text {
+    @extend .u-fs-10;
+    color: $colorWhite;
+    text-align: center;
+}
+
+.p-signIn__signInText {
+    @extend .u-fs-10;
+    text-align: center;
+    color: #6D480B;
+}

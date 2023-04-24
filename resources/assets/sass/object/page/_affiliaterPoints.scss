@@ -1,0 +1,57 @@
+#affiliater_points {
+  .point_info_box {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .list__listItem {
+    &::after {content: none;}
+  }
+
+  .coupon_title {
+    width: 60%;
+    p {
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+    }
+  }
+
+  .affiliater__coin__icon {
+    width: 22px;
+  }
+
+  .application_info {
+    padding: 10px;
+    border-radius: 2px;
+    background: $colorPassGray;
+
+    p {
+      font-size: 10px;
+      color: $colorGray;
+    }
+
+    .title {
+      font-weight: bold;
+    }
+  }
+
+  input::placeholder {
+    color: $colorPassGray;
+  }
+
+  .p-signUp__form__checkbox__label::before {
+    top: 0
+  }
+
+  button:disabled {
+    background-color: $colorPassGray;
+  }
+
+  .c-list__listItem {
+    &:after {
+      content: none;
+    }
+  }
+}

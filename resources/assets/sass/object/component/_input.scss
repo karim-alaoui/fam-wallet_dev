@@ -1,0 +1,468 @@
+.c-input {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.c-input__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.c-input__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.c-input__contents {
+    padding: 13px 16px 0;
+}
+.c-input__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+.c-input__form__label__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.c-input__form__label__count {
+    @extend .u-fs-10
+}
+.c-input__form__helpLink {
+    @extend .u-fs-12;
+    position: relative;
+    margin: 26px 0 16px;
+    color: $colorGray;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/icon/icon_help.png");
+        background-size: cover;
+    }
+}
+.c-input__form__textarea {
+    @extend .u-fs-14;
+    width: 100%;
+    height: 120px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    box-sizing:border-box;
+}
+.c-input__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+    display: inline-block;
+}
+.c-input__form__selectall {
+    @extend .u-fs-11;
+    color: $colorLight; 
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+}
+.c-input__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.c-input__form__note {
+    @extend .u-fs-10;
+    margin-top: 3px;
+    color: $colorThinGray;
+}
+.c-input__form__checkbox__wrap {
+    @extend .u-fs-11;
+    margin-top: 12px;
+}
+.c-input__form__checkbox__list {
+    border: 1px solid $colorBorder;
+}
+.c-input__form__checkbox__listItem {
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBorder;
+    }
+}
+.c-input__form__checkbox__label {
+    label {
+        @extend .u-fs-14;
+        position: relative;
+        display: inline-block;
+        word-break: break-all;
+        width: 100%;
+        padding: 10px 12px 7px 40px;
+        background-color: $colorWhite;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 12px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 1px solid $colorBorder;
+            border-radius: 50%;
+            background-color: $colorWhite;
+        }
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 48%;
+            left: 19px;
+            width: 5px;
+            height: 8px;
+            transform: translateY(-50%) rotate(40deg);
+            border-bottom: 1px solid $colorBorder;
+            border-right: 1px solid $colorBorder;
+        }
+        &.is-check {
+            background-color: $colorClick;
+            &::before{
+                background-color: $colorOrange;
+            }
+            &::after{
+                border-bottom: 1px solid $colorWhite;
+                border-right: 1px solid $colorWhite;
+            }
+        }
+    }
+}
+.c-input__form__btn {
+    margin-top: 16px;
+}
+.c-input__form__text {
+    @extend .u-fs-10, .u-lh-14;
+    margin-top: 10px;
+}
+.c-input__form__select__wrap {
+    display: flex;
+    /*justify-content: space-between;*/
+    align-items: center;
+}
+.c-input__form__select {
+    @extend .u-fs-14;
+    position: relative;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        right: 8px;
+        transform: translateY(-50%);
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+    input {
+        min-width: 133px;
+        width: 100%;
+        padding: 8px 12px;
+    }
+}
+.c-input__form__select__text {
+    @extend .u-fs-14;
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+}
+.c-input__form__color__radio__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    label {
+        width: 17%;
+        &:nth-child(-n+5) {
+            margin-bottom: 12px;
+        }
+    }
+}
+.c-input__form__radio__label {
+    display: flexbox;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    label {
+        &.is-check + .c-input__form__color__radio__text {
+            border: 1px solid $colorOrange;
+        }
+    }
+}
+.c-input__form__color__radio__text {
+    @extend .u-fs-24;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 5px 0;
+    border-radius: 2px;
+    color: $colorWhite;
+    text-align: center;
+}
+.c-input__overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.6);
+}
+.c-input__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 300px;
+    overflow: scroll;
+    height: 600px;
+    padding: 18px 24px 24px;
+    background-color: $colorWhite;
+}
+.c-input__modal__close {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 16px;    
+    height: 16px;
+    cursor: pointer;
+    >span {
+        display: inline-block;
+        position: absolute;
+        top: 45%;
+        left: 45%;
+        width: 11px;
+        height: 0px;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ccc;
+        &:first-child {
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        &:last-child {
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }
+}
+.c-input__modal__tabs {
+    display: flex;
+    margin-bottom: 10px;
+}
+.c-input__modal__tab {
+    @extend .u-fs-14;
+    width: 50%;
+    padding: 5px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    &.is-active {
+        border-bottom: 2px solid $colorOrange;
+        color: $colorOrange;
+    }
+}
+.c-input__modal__heading {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+}
+.c-input__modal__list {
+    display: flex;
+    margin-top: 13px;
+}
+.c-input__modal__listItem {
+    @extend .u-fs-12;
+    font-weight: 600;
+    >span {
+        font-weight: 300;
+    }
+}
+.c-input__modal__coupon__list {
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+.c-input__modal__label__shopImage {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/1.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__label__shopName {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/2.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__label__benefits {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/3.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__label__couponTitle {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/4.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__label__expirationDate {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/5.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__label__qr {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/6.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__label__detail {
+    @extend .u-fs-14;
+    margin-top: 10px;
+    font-weight: 600;
+    &::after {
+        content: "";
+        position: absolute;
+        left: 5px;
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/common/7.png");
+        background-size: cover;
+    }
+}
+.c-input__modal__text {
+    @extend .u-fs-12;
+    margin-top: 1px;
+    color: $colorGray;
+}
+.c-input__modal__img--coupon {
+    margin: 0 auto;
+}
+.c-input__form__state__radio__wrap  {
+    margin-top: 6px;
+}
+.c-input__form__state__radio__label {
+    display: block;
+}
+.c-input__form__state__radio__text {
+    @extend .u-fs-14;
+    position: relative;
+    // padding-left: 20px;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 0px;
+    //     transform: translateY(-50%);
+    //     width: 20px;
+    //     height: 20px;
+    //     border: 2px solid $colorOrange;
+    //     border-radius: 50%;
+    // }
+}
+.c-input__form__state__heading {
+    @extend .u-fs-11;
+    margin: 10px 0 0 24px;
+    color: #777;
+}
+.c-input__from__state__select {
+    @extend .u-fs-14;
+    position: relative;
+    width: 150px;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+    &::before {
+        content: "個";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+    }
+    select {
+        padding: 8px 12px;
+        &:disabled {
+            background-color: $colorBg;
+        }
+    }
+}
+.c-input__form__state__input {
+    @extend .u-fs-14;
+    width: calc(100% - 24px);
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    &:disabled {
+        background-color: $colorBg;
+    }
+}

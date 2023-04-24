@@ -1,0 +1,207 @@
+.p-analytics {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-analytics__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-analytics__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-analytics__tabs {
+    display: flex;
+    background-color: $colorWhite;
+}
+.p-analytics__tab {
+    width: 50%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: $colorGray;
+    &.is-active {
+        border-bottom: 2px solid $colorOrange;
+        color: $colorOrange;
+        font-weight: 600;
+    }
+}
+.p-analytics__tab__text {
+    @extend.u-fs-12;
+
+}
+.p-analytics__box {
+    padding: 16px 16px 13px;
+    background-color: $colorWhite;
+}
+.p-analytics__select__wrap {
+    @extend .u-fs-14;
+    position: relative;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+}
+.p-analytics__select {
+    min-width: 133px;
+    width: 100%;
+    padding: 8px 12px;
+}
+.p-analytics__text {
+    @extend .u-fs-15,.u-lh-18;
+    margin-top: 12px;
+}
+.p-analytics__link {
+    @extend .u-fs-12;
+    position: relative;
+    margin-top: 10px;
+    padding-left: 15px;
+    color: $colorBlue;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-image: url("/img/icon/icon_calendar.png");
+        background-size: contain;
+    }
+}
+.p-analytics__contents {
+    display: none;
+    margin-top: 24px;
+    &.is-active {
+        display: block;
+    }
+}
+.p-analytics__table {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    background-color: $colorWhite;
+}
+.p-analytics__table__thead {
+    @extend .u-fs-12;
+    border-bottom: 1px solid $colorBorder;
+    font-weight: 600;
+    color: $colorGray;
+    height: 36px;
+    >.p-analytics__table__tr {
+        height: 36px;
+    }
+}
+.p-analytics__table__tr {
+    &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+    }
+    th,td {
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 16px 0;
+        >a {
+            color: $colorBlue;
+        }
+    }
+    th {
+        &:not(:first-child) {
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 13px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-left: 6px;
+                padding: 1.5px 4px;
+                background-image: url("/img/common/triangle_double.png");
+                background-size: cover;
+            }
+        }
+    }
+    th + .p-analytics__filter__none{
+        &:not(:first-child) {
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 13px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                margin-left: 6px;
+                padding: 1.5px 4px;
+            }
+        }
+    }
+}
+.p-analytics__table__tbody {
+    @extend .u-fs-12;
+    color: $colorGray;
+    >.p-analytics__table__tr {
+        height: 45px;
+    }
+}
+.p-analytics__table__tag {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #eee;
+    color: $colorGray;
+    font-size: 12px;
+    line-height: 1.5;
+    &.is-active {
+        background-color: rgba($colorOrange, .1);
+        color: $colorOrange;
+    }
+}
+.p-analytics__pagenation__wrap {
+    margin-top: 16px;
+    padding: 0 16px;
+}
+.p-analytics__pagenation {
+    @extend .u-fs-15, .u-lh-18;
+    display: flex;
+    border: 1px solid $colorOrange;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    color: $colorOrange;
+}
+.p-analytics__pagenation__left {
+    width: 28%;
+    padding: 11px 0;
+    border-right: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
+.p-analytics__pagenation__center {
+    width: 44%;
+    padding: 11px 0;
+    text-align: center;
+}
+.p-analytics__pagenation__right {
+    width: 28%;
+    padding: 11px 0;
+    border-left: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}

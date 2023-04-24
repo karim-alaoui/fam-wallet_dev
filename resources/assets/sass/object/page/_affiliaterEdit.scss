@@ -1,0 +1,32 @@
+.affiliaterEdit__pointBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+        color: $colorOrange;
+    }
+
+    p {
+        font-size: 11px;
+        font-weight: bold;
+        color: $colorGray;
+    }
+}
+
+.affiliaterEdit__bankBox {
+    color: $colorGray;
+    .title {
+        font-size: 11px;
+        font-weight: bold;
+    }
+    .bank_name {
+        font-size: 14px;
+    }
+    .branch_name {
+        font-size: 10px;
+    }
+    .name {
+        font-size: 10px;
+    }
+}

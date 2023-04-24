@@ -1,0 +1,26 @@
+.p-signUpRegistration {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-signUpRegistration__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-signUpRegistration__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-signUpRegistration__contents {
+    padding: 20px 16px 0;
+}
+.p-signUpRegistration__heading {
+    @extend .u-fs-14;
+    font-weight: 600;
+}
+.p-signUpRegistration__text {
+    @extend .u-fs-12;
+    margin-top: 10px;
+}
+.p-signUpRegistration__btn {
+    margin-top: 22px;
+}

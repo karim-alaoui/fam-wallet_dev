@@ -1,0 +1,36 @@
+.p-leaderConfirm {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-leaderConfirm__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-leaderConfirm__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-leaderConfirm__contents {
+    padding: 13px 16px 0;
+}
+.p-leaderConfirm__item {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    &:not(:first-child) {
+        margin-top: 19px;
+    }
+}
+.p-leaderConfirm__item__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-leaderConfirm__item__text {
+    @extend .u-fs-14;
+    margin-top: 4px;
+}
+.p-leaderConfirm__btn {
+    margin-top: 16px;
+    &:last-child{
+        margin-top: 12px;
+    }
+}

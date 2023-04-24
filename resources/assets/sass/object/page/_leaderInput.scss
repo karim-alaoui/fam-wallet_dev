@@ -1,0 +1,115 @@
+.p-leaderInput {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-leaderInput__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-leaderInput__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-leaderInput__contents {
+    padding: 13px 16px 0;
+}
+.p-leaderInput__form {
+}
+.p-leaderInput__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+.p-leaderInput__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+    display: inline-block;
+}
+.p-leaderInput__form__selectall {
+    @extend .u-fs-11;
+    color: $colorLight; 
+    display: inline-block;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+}
+.p-leaderInput__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-leaderInput__form__note {
+    @extend .u-fs-11;
+    color: $colorThinGray;
+}
+.p-leaderInput__form__checkbox__wrap {
+    @extend .u-fs-11;
+    margin-top: 12px;
+}
+.p-leaderInput__form__checkbox__list {
+    border: 1px solid $colorBorder;
+}
+.p-leaderInput__form__checkbox__listItem {
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBorder;
+    }
+}
+.p-leaderInput__form__checkbox__item {
+
+}
+.p-leaderInput__form__checkbox__input {
+    &:checked + .p-leaderInput__form__checkbox__label::after {
+        border-bottom: 1px solid $colorWhite;
+        border-right: 1px solid $colorWhite;
+    }
+    &:checked + .p-leaderInput__form__checkbox__label::before {
+        background-color: $colorOrange;
+    }
+    &:checked + .p-leaderInput__form__checkbox__label {
+        background-color: $colorClick;
+    }
+}
+.p-leaderInput__form__checkbox__label {
+    @extend .u-fs-14;
+    position: relative;
+    display: inline-block;
+    word-break: break-all;
+    width: 100%;
+    padding: 10px 12px 7px 40px;
+    background-color: $colorWhite;
+    //padding-left: 28px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: 1px solid $colorBorder;
+        border-radius: 50%;
+        background-color: $colorWhite;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 48%;
+        left: 19px;
+        width: 5px;
+        height: 8px;
+        transform: translateY(-50%) rotate(40deg);
+        border-bottom: 1px solid $colorBorder;
+        border-right: 1px solid $colorBorder;
+    }
+    >a {
+        color: $colorBlue;
+    }
+}
+.p-leaderInput__form__btn {
+    margin-top: 16px;
+}

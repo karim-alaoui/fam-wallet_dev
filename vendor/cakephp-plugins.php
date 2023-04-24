@@ -1,0 +1,14 @@
+<?php
+$baseDir = dirname(dirname(__FILE__));
+
+return [
+    'plugins' => [
+        'Bake' => $baseDir . '/vendor/cakephp/bake/',
+        'CakeDC/Auth' => $baseDir . '/vendor/cakedc/auth/',
+        'CakeDC/Users' => $baseDir . '/vendor/cakedc/users/',
+        'CakeFabricate' => $baseDir . '/vendor/sizuhiko/cake_fabricate/',
+        'DebugKit' => $baseDir . '/vendor/cakephp/debug_kit/',
+        'Migrations' => $baseDir . '/vendor/cakephp/migrations/',
+        'WyriHaximus/TwigView' => $baseDir . '/vendor/wyrihaximus/twig-view/',
+    ],
+];

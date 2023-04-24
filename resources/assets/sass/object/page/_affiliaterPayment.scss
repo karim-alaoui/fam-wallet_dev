@@ -1,0 +1,30 @@
+.affiliaterPayment_sectionTitle {
+    margin-top: 24px;
+    font-size: 12px;
+    color: $colorThinGray;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 10px;
+
+}
+.affiliater__payment__list {
+    background: $colorWhite;
+    padding: 15px 10px;
+    border-bottom: 1px solid $colorBorder;
+    color: $colorGray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .c-list__heading {
+        font-weight: bold;
+    }
+}
+
+.border__bottom__none {
+    border-bottom: none;
+}
+
+.affiliater__payment__sum {
+    color: $colorOrange;
+}

@@ -1,0 +1,14 @@
+.l-footer {
+    padding: 24px 0 40px;
+    background-color: $colorBg;
+    text-align: center;
+}
+.l-footer__login {
+    padding: 24px 0px 100px;
+    background-color: $colorBg;
+    text-align: center;
+}
+.l-footer__text {
+    @extend .u-fs-10;
+    color: $colorThinGray;
+}

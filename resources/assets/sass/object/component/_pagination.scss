@@ -1,0 +1,46 @@
+.c-pagination__list {
+    @extend .u-fs-15, .u-lh-18;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid $colorOrange;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    color: $colorOrange;
+    list-style: none;
+    &.active,
+    &.disabled,
+    &.ellipsis {
+      color: #a4a9aa;
+    }
+}
+.c-pagenation__left {
+    width: 28%;
+    padding: 11px 0;
+    border-right: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
+.c-pagenation__center {
+    width: 100%;
+    padding: 11px 0;
+    text-align: center;
+    > li {
+      display: inline-block;
+      width: 30px;
+      &:not(:first-child):not(:last-child) {
+          padding-top: 1px;
+      }
+      &.active,
+      &.disabled,
+      &.ellipsis {
+        color: #a4a9aa;
+      }
+    }
+}
+.c-pagenation__right {
+    width: 28%;
+    padding: 11px 0;
+    border-left: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}

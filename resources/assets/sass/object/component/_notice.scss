@@ -1,0 +1,36 @@
+.c-notice {
+    position: relative;
+    padding: 14px 16px;
+    border-top: 1px solid $colorBorder;
+    border-bottom: 1px solid $colorBorder;
+    background-color: $colorBg;
+}
+.c-notice__heading {
+    @extend .u-fs-11;
+}
+.c-notice__close {
+    position: absolute;
+    top: 7px;
+    right: 4px;
+    width: 16px;
+    height: 16px;
+    >span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        width: 12px;
+        height: 0px;
+        border: 1px solid $colorThinGray;
+        &:first-child {
+            transform: rotate(45deg);
+        }
+        &:last-child {
+            transform: rotate(-45deg);
+        }
+    }
+}
+.c-notice__text {
+    @extend .u-fs-11, .u-lh-15;
+    margin-top: 4px;
+    color: $colorThinGray;
+}

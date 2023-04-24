@@ -1,0 +1,109 @@
+.p-accountInfo {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-accountInfo__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-accountInfo__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-accountInfo__contents {
+    padding: 21px 16px 0;
+}
+.p-accountInfo__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+.p-accountInfo__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-accountInfo__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    margin-top: 1px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-accountInfo__form__btn {
+    margin-top: 16px;
+}
+.p-accountInfo__list {
+    margin-top: 24px;
+}
+.p-accountInfo__listItem {
+    padding: 13px 16px;
+    border-top: 1px solid #eee;
+}
+.p-accountInfo__listItem__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-accountInfo__listItem__text {
+    @extend .u-fs-14;
+    margin-top: 4px;
+}
+.p-accountInfo__listItem__link {
+    @extend .u-fs-12;
+    margin-top: 4px;
+    color: $colorBlue;
+}
+.p-accountInfo__delete__wrap {
+    padding: 13px 0 16px;
+    border-top: 1px solid $colorBorder;
+    text-align: center;
+}
+.p-accountInfo__delete {
+    @extend .u-fs-12;
+    color: $colorRed;
+}
+.p-accountInfo__overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.6);
+}
+.p-accountInfo__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 256px;
+    padding: 18px 24px 24px;
+    background-color: $colorWhite;
+}
+.p-accountInfo__modal__heading {
+    @extend .u-fs-14;
+    font-weight: 600;
+}
+.p-accountInfo__modal__btn__wrap {
+    display: flex;
+    margin-top: 13px;
+}
+.p-accountInfo__modal__btn {
+    &:not(:first-child) {
+        margin-left: 12px;
+    }
+}
+
+.p-accountInfo__credit {
+    &--brand {
+        color: #646464;
+        font-size: 14px;
+    }
+    &--number {
+        color: #888888;
+        font-size: 10px;
+    }
+    &--expiration_date {
+        color: #888888;
+        font-size: 10px;
+    }
+}

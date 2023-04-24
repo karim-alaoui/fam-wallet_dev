@@ -1,0 +1,186 @@
+.c-list {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.c-list__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.c-list__title__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.c-list__title__btn {
+    position: absolute;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: $colorOrange;
+    >a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.c-list__title__btn__plus {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 11px;
+    border: 1px solid $colorWhite;
+    border-radius: 4px;
+    &:last-child {
+        transform: translate(-50%,-50%) rotate(90deg);
+    }
+}
+.c-list__content__noData {
+    padding: 24px 16px 0;
+}
+.c-list__content {
+    padding-top: 24px;
+}
+.c-list__text__wrap {
+    padding: 0 16px;
+}
+.c-list__btn {
+    margin-top: 20px;
+}
+.c-list__text {
+    @extend .u-fs-12;
+}
+.c-list__listItem {
+    position: relative;
+    background-color: $colorWhite;
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBorder;
+    }
+    >a {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 32px 10px 16px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background-image: url("/img/common/arrow-right.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+.c-list__heading {
+    @extend .u-fs-12;
+    margin-bottom: 3px;
+}
+.c-list__shop__list {
+    margin-top: 4px;
+}
+.c-list__shop__listItem {
+    position: relative;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        width: 13px;
+        height: 10px;
+        background-image: url("/img/icon/icon_shop.png");
+        background-size: cover;
+    }
+}
+.c-list__shop__listItem__none {
+    position: relative;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 3px;
+        height: 10px;
+    }
+}
+.c-list__shop__listItem__img {
+    width: 13px;
+}
+.c-list__shop__listItem__text {
+    @extend .u-fs-11;
+    color: $colorGray;
+    width: 100%;
+    padding-left: 17px;
+    word-break: break-all;
+    margin-bottom: 3px;
+}
+.c-list__shop__listItem__text__none {
+    @extend .u-fs-11;
+    color: $colorGray;
+    width: 100%;
+    word-break: break-all;
+    margin-bottom: 3px;
+}
+.c-list__plus__btn {
+    position: absolute;
+    right: 0;
+    margin-right: 90px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    // margin-top: 20px;
+    border-radius: 50px;
+    background-color: $colorWhite;
+    border: 1px solid $colorOrange;
+
+    >a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.c-list__add__btn__plus {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 11px;
+    border: 1px solid $colorOrange;
+    border-radius: 4px;
+    &:last-child {
+        transform: translate(-50%,-50%) rotate(90deg);
+    }
+}
+.c-list__minus__btn {
+    position: absolute;
+    left: 0;
+    margin-left: 90px;
+    margin-top: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: $colorWhite;
+    border: 1px solid $colorOrange;
+    >a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+    }
+}
+.c-list__add__btn__minus {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 11px;
+    border: 1px solid $colorOrange;
+    border-radius: 4px;
+}

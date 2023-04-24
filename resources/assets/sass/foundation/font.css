@@ -1,0 +1,15 @@
+@charset "UTF-8";
+body {
+  color: #333;
+  line-height: 1.5;
+  font-family: Hiragino Sans,"ヒラギノ角ゴシック",Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Meiryo, "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+.font-number {
+  font-family: "Times New Roman";
+}
+
+.font-gothic {
+  font-family: Hiragino Sans,"ヒラギノ角ゴシック",Hiragino Kaku Gothic ProN, "ヒラギノ角ゴ ProN W3", Roboto, "Droid Sans", YuGothic, "游ゴシック", Meiryo, "メイリオ", Verdana, "ＭＳ Ｐゴシック", sans-serif;
+}
+/*# sourceMappingURL=font.css.map */

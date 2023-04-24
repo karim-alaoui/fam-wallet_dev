@@ -1,0 +1,63 @@
+.c-confirm {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.c-confirm__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.c-confirm__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.c-confirm__contents {
+    padding: 21px 16px 0;
+}
+.c-confirm__item {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee;
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+}
+.c-confirm__item__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.c-confirm__item__text {
+    @extend .u-fs-14;
+    margin-top: 3px;
+}
+.c-confirm__item__colorTile {
+    @extend .u-fs-24;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 11px;
+    padding: 6px 0;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    background-color: $colorWhite;
+    text-align: center;
+}
+.c-confirm__tab {
+    @extend .u-fs-12;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid $colorOrange;
+    background-color: $colorWhite;
+    color: $colorOrange;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}
+.c-confirm__tab__error {
+    @extend .u-fs-12;
+    height: 40px;
+    border-radius: 2px;
+    border: 1px solid #D56C6C;
+    background-color: $colorWhite;
+    color: #D56C6C;
+    cursor: pointer;
+    text-align: center;
+    padding: 10px;
+}

@@ -1,0 +1,75 @@
+.p-couponQr {
+    min-height: 100vh;
+    padding: 12px 16px 0;
+    background-color: $colorOrange;
+}
+.p-couponQr__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-couponQr__header__close {
+  height: 24px;
+  a {
+    display: inline-block;
+    position: relative;
+    width: 24px;
+    height: 24px;
+  }
+    span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        width: 16px;
+        border: 1px solid $colorWhite;
+        &:first-child {
+            transform: translateY(-50%) rotate(45deg);
+        }
+        &:last-child {
+            transform: translateY(-50%) rotate(-45deg);
+        }
+    }
+}
+.p-couponQr__link__wrap {
+    @extend .u-fs-12;
+    position: relative;
+    color: $colorWhite;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 8px;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-image: url("/img/icon/icon_share_white.png");
+        background-size: cover;
+        pointer-events: none;
+    }
+    >a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        padding: 3px 8px 3px 22px;
+        border-radius: 2px;
+        background-color: rgba($colorWhite,0.2);
+    }
+}
+.p-couponQr__contents {
+    margin-top: 46px;
+}
+.p-couponQr__text {
+    @extend .u-fs-14, .u-fw-b;
+    color: $colorWhite;
+    text-align: center;
+}
+.p-couponQr__img {
+    border-radius: 8px;
+    margin-top: 18px;
+    padding: 0 16px;
+    overflow: hidden;
+    position: relative;
+    position: 90vw;
+    height: 90vw;
+    background-color: #fff;
+}

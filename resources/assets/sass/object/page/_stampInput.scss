@@ -1,0 +1,330 @@
+.p-stampInput {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-stampInput__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-stampInput__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-stampInput__contents {
+    padding: 21px 16px 0;
+}
+.p-stampInput__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 12px;
+    }
+    &:nth-child(3) {
+        margin-top: 5px;
+    }
+    &:nth-child(7) {
+        margin-top: 7px;
+    }
+}
+.p-stampInput__form__label__wrap {
+    display: flex;
+    justify-content: space-between;
+}
+.p-stampInput__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-stampInput__form__label__count {
+    @extend .u-fs-10
+}
+.p-stampInput__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-stampInput__form__textarea {
+    @extend .u-fs-14;
+    width: 100%;
+    height: 120px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    box-sizing:border-box;
+}
+.p-stampInput__form__note {
+    @extend .u-fs-11;
+    color: $colorThinGray;
+}
+.p-stampInput__form__select__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-stampInput__form__select {
+    @extend .u-fs-14;
+    position: relative;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+    input {
+        min-width: 133px;
+        width: 100%;
+        padding: 8px 12px;
+    }
+}
+.p-stampInput__form__select__text {
+    @extend .u-fs-14;
+    flex-shrink: 0;
+    width: 20px;
+    text-align: center;
+}
+.p-stampInput__form__color__radio__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    label {
+        width: 17%;
+        &:nth-child(-n+5) {
+            margin-bottom: 12px;
+        }
+    }
+}
+.p-stampInput__form__color__radio {
+    &:checked + .p-stampInput__form__color__radio__text {
+        // border: 1px solid $colorOrange;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-45%,-65%) rotate(45deg);
+            width: 13px;
+            height: 18px;
+            border-right: 1px solid #777;
+            border-bottom: 1px solid #777;
+        }
+    }
+}
+.p-stampInput__form__color__radio__text {
+    @extend .u-fs-24;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    padding: 5px 0;
+    border-radius: 2px;
+    color: $colorWhite;
+    text-align: center;
+}
+.p-stampInput__form__helplink {
+    @extend .u-fs-12;
+    position: relative;
+    margin: 26px 0 26px;
+    margin-top: 26px;
+    padding-left: 22px;
+    color: $colorGray;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 17px;
+        height: 17px;
+        background-image: url("/img/icon/icon_help.png");
+        background-size: cover;
+    }
+}
+.p-stampInput__form__state__radio__wrap  {
+    margin-top: 6px;
+}
+.p-stampInput__form__state__radio__label {
+    display: block;
+}
+// .p-stampInput__form__state__radio {
+//     &:checked + .p-stampInput__form__state__radio__text {
+//         &::after {
+//             content: "";
+//             position: absolute;
+//             top: 50%;
+//             left: 4px;
+//             transform: translateY(-50%);
+//             width: 12px;
+//             height: 12px;
+//             border-radius: 50%;
+//             background-color: $colorOrange;
+//         }
+//     }
+// }
+.p-stampInput__form__state__radio__text {
+    @extend .u-fs-14;
+    position: relative;
+    // padding-left: 20px;
+    // &::before {
+    //     content: "";
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 0px;
+    //     transform: translateY(-50%);
+    //     width: 20px;
+    //     height: 20px;
+    //     border: 2px solid $colorOrange;
+    //     border-radius: 50%;
+    // }
+}
+.p-stampInput__form__state__heading {
+    @extend .u-fs-11;
+    margin: 10px 0 0 24px;
+    color: #777;
+}
+.p-stampInput__from__state__select {
+    @extend .u-fs-14;
+    position: relative;
+    width: 150px;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+    &::before {
+        content: "個";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: -30px;
+        transform: translateY(-50%);
+    }
+    select {
+        padding: 8px 12px;
+        &:disabled {
+            background-color: $colorBg;
+        }
+    }
+}
+.p-stampInput__form__state__input {
+    @extend .u-fs-14;
+    width: calc(100% - 24px);
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    &:disabled {
+        background-color: $colorBg;
+    }
+}
+.p-stampInput__form__file {
+    display: block;
+    position: relative;
+    height: 200px;
+    margin-top: 1px;
+    border: 1px solid $colorBorder;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 35px;
+        height: 40px;
+        background-image: url();
+        background-size: cover;
+        pointer-events: none;
+    }
+}
+.p-stampInput__form__text {
+    @extend .u-fs-10, .u-lh-14;
+    margin-top: 10px;
+}
+.p-stampInput__form__btn {
+    margin-top: 25px;
+}
+.p-stampInput__form__checkbox__list {
+    border: 1px solid $colorBorder;
+}
+.p-stampInput__form__checkbox__listItem {
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBorder;
+    }
+}
+.p-stampInput__form__checkbox__label {
+    @extend .u-fs-14;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: 10px 12px 10px 40px;
+    background-color: $colorWhite;
+    //padding-left: 28px;
+    &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 12px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border: 1px solid $colorBorder;
+        border-radius: 50%;
+        background-color: $colorWhite;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 48%;
+        left: 19px;
+        width: 5px;
+        height: 8px;
+        transform: translateY(-50%) rotate(40deg);
+        border-bottom: 1px solid $colorBorder;
+        border-right: 1px solid $colorBorder;
+    }
+}
+.p-stampInput__form__color__radio__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    label {
+        width: 17%;
+        &:nth-child(-n+5) {
+            margin-bottom: 12px;
+        }
+    }
+}
+.p-stampInput__form__radio__label {
+    display: flexbox;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    label {
+        &.is-check + .p-stampInput__form__color__radio__text {
+            border: 1px solid $colorOrange;
+        }
+    }
+}

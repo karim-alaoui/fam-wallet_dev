@@ -1,0 +1,47 @@
+2022-09-22 18:09:01 Error: [InvalidArgumentException] There was a problem connecting to the database: SQLSTATE[HY000] [2002] No such file or directory in /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 82
+Stack Trace:
+#0 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/MysqlAdapter.php(116): Phinx\Db\Adapter\PdoAdapter->createPdoConnection('mysql:host=loca...', 'root', 'password', Array)
+#1 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php(148): Phinx\Db\Adapter\MysqlAdapter->connect()
+#2 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php(496): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#3 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#4 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Command/CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#5 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(63): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#6 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Command/Migrate.php(66): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Command/Command.php(298): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Application.php(1028): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Application.php(299): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Application.php(171): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/cakephp/src/Console/Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#14 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(169): Cake\Console\Shell->runCommand(Array, true, Array)
+#15 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/cakephp/src/Console/CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#16 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#17 /Users/k.fukuoka/codes/fam-wallet/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#18 {main}
+
+
+Caused by: [PDOException] SQLSTATE[HY000] [2002] No such file or directory in /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php on line 79
+Stack Trace:
+#0 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php(79): PDO->__construct('mysql:host=loca...', 'root', 'password', Array)
+#1 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/MysqlAdapter.php(116): Phinx\Db\Adapter\PdoAdapter->createPdoConnection('mysql:host=loca...', 'root', 'password', Array)
+#2 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/PdoAdapter.php(148): Phinx\Db\Adapter\MysqlAdapter->connect()
+#3 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Db/Adapter/AdapterWrapper.php(496): Phinx\Db\Adapter\PdoAdapter->getConnection()
+#4 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/CakeAdapter.php(56): Phinx\Db\Adapter\AdapterWrapper->getConnection()
+#5 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Command/CommandTrait.php(78): Migrations\CakeAdapter->__construct(Object(Phinx\Db\Adapter\TimedOutputAdapter), Object(Cake\Database\Connection))
+#6 /Users/k.fukuoka/codes/fam-wallet/vendor/robmorgan/phinx/src/Phinx/Console/Command/Migrate.php(63): Migrations\Command\Migrate->bootstrap(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#7 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Command/CommandTrait.php(35): Phinx\Console\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#8 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Command/Migrate.php(66): Migrations\Command\Migrate->parentExecute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#9 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Command/Command.php(298): Migrations\Command\Migrate->execute(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#10 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Application.php(1028): Symfony\Component\Console\Command\Command->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#11 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Application.php(299): Symfony\Component\Console\Application->doRunCommand(Object(Migrations\Command\Migrate), Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#12 /Users/k.fukuoka/codes/fam-wallet/vendor/symfony/console/Application.php(171): Symfony\Component\Console\Application->doRun(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#13 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(108): Symfony\Component\Console\Application->run(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#14 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/cakephp/src/Console/Shell.php(531): Migrations\Shell\MigrationsShell->main('migrations', 'migrate')
+#15 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/migrations/src/Shell/MigrationsShell.php(169): Cake\Console\Shell->runCommand(Array, true, Array)
+#16 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/cakephp/src/Console/CommandRunner.php(385): Migrations\Shell\MigrationsShell->runCommand(Array, true)
+#17 /Users/k.fukuoka/codes/fam-wallet/vendor/cakephp/cakephp/src/Console/CommandRunner.php(162): Cake\Console\CommandRunner->runShell(Object(Migrations\Shell\MigrationsShell), Array)
+#18 /Users/k.fukuoka/codes/fam-wallet/bin/cake.php(12): Cake\Console\CommandRunner->run(Array)
+#19 {main}
+
+

@@ -1,0 +1,28 @@
+.p-signUpTemRegistration {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-signUpTemRegistration__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-signUpTemRegistration__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-signUpTemRegistration__contents {
+    padding: 19px 16px 0;
+}
+.p-signUpTemRegistration__heading {
+    @extend .u-fs-14;
+    font-weight: 600;
+}
+.p-signUpTemRegistration__text {
+    @extend .u-fs-12;
+    margin-top: 10px;
+}
+.p-signUpTemRegistration__link {
+    @extend .u-fs-12;
+    margin-top: 12px;
+    color: $colorBlue;
+}

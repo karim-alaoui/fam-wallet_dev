@@ -1,0 +1,181 @@
+.p-shopEdit {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-shopEdit__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-shopEdit__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-shopEdit__contents {
+    padding: 24px 16px 0;
+}
+.p-shopEdit__form__file__cycle {
+    display: block;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border: 4px solid $colorWhite;
+    border-radius: 50%;
+    background-color: #eee;
+    cursor: pointer;
+    >input {
+        display: none;
+    }
+}
+.p-shopEdit__form__file__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    width: 110px;
+    overflow: hidden;
+}
+.p-shopEdit__form__file__text {
+    @extend .u-fs-12;
+}
+.p-shopEdit__form__file__label {
+    position: absolute;
+    bottom: -4px;
+    right: -4px;
+    width: 35px;
+    height: 35px;
+    border: 1px solid $colorOrange;
+    border-radius: 50%;
+    background-color: $colorWhite;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    &::after {
+        content: "";
+        position: absolute;
+        top: 48%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 17px;
+        height: 14px;
+        background-image: url("/img/icon/icon_camera.png");
+        background-size: cover;
+    }
+}
+.p-shopEdit__form__text__wrap {
+    margin-top: 16px;
+    padding: 10px;
+    background-color: #eee;
+}
+.p-shopEdit__form__text {
+    @extend .u-fs-10, .u-lh-14;
+    color: $colorGray;
+}
+.p-shopEdit__form__input__container {
+    margin-top: 23px;
+}
+.p-shopEdit__form__input__wrap {
+    &:not(:first-child) {
+        margin-top: 9px;
+    }
+}
+.p-shopEdit__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-shopEdit__form__input {
+    @extend .u-fs-14;
+    width: 100%;
+    margin-top: 1px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    &::placeholder {
+        color: #ccc;
+    }
+}
+.p-shopEdit__form__textarea {
+    @extend .u-fs-14;
+    width: 100%;
+    min-height: 120px;
+    margin-top: 1px;
+    padding: 8px 12px;
+    border: 1px solid $colorBorder;
+    border-radius: 2px;
+    background-color: $colorWhite;
+}
+.p-shopEdit__form__btn {
+    margin-top: 16px;
+}
+.p-shopEdit__delete__wrap {
+    margin-top: 24px;
+    padding: 13px 0 16px;
+    border-top: 1px solid $colorBorder;
+    text-align: center;
+}
+.p-shopEdit__delete {
+    @extend .u-fs-12;
+    color: $colorRed;
+}
+.p-shopEdit__overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.6);
+}
+.p-shopEdit__modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 256px;
+    padding: 20px 24px 21px;
+    background-color: $colorWhite;
+}
+.p-shopEdit__modal__content {
+    position: relative;
+}
+.p-shopEdit__modal__heading {
+    @extend .u-fs-14;
+    font-weight: 600;
+}
+.p-shopEdit__modal__text {
+    @extend .u-fs-12;
+    margin-top: 1px;
+    color: $colorGray;
+}
+.p-shopEdit__modal__btn__wrap {
+    display: flex;
+    margin-top: 13px;
+}
+.p-shopEdit__modal__btn {
+    &:not(:first-child) {
+        margin-left: 12px;
+    }
+}
+.p-shopEdit__modal__close {
+    position: absolute;
+    top: -12px;
+    left: -15px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    >span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 11px;
+        height: 0px;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ccc;
+        &:first-child {
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        &:last-child {
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }
+}

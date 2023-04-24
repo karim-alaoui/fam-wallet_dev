@@ -1,0 +1,254 @@
+.p-couponEdit {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-couponEdit__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-couponEdit__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-couponEdit__btn {
+    margin-top: 20px;
+    padding: 0 16px;
+}
+.p-couponEdit__btn__heading {
+    @extend .u-fs-12;
+    color: $colorThinGray;
+}
+.p-couponEdit__btn__wrap {
+    border-radius: 10px;
+    background-color: $colorWhite;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    &:not(:first-child) {
+        margin-top: 9px;
+    }
+    >a {
+        display: inline-block;
+        width: 100%;
+        padding: 14px 0;
+    }
+    >button {
+        display: inline-block;
+        width: 100%;
+        padding: 14px 0;
+    }
+}
+.p-couponEdit__btn__text {
+    @extend .u-fs-14;
+    position: relative;
+    text-align: center;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 19px;
+        transform: translateY(-50%);
+        background-size: cover;
+        background-position: center;
+    }
+}
+.p-couponEdit__btn__img--qr {
+    &::after {
+        width: 28px;
+        height: 28px;
+        background-image: url("/img/icon/icon_qr-gray.png");
+    }
+}
+.p-couponEdit__btn__img--share {
+    &::after {
+        width: 28px;
+        height: 28px;
+        background-image: url("/img/icon/icon_share.png");
+    }
+}
+.p-couponEdit__status__wrap {
+    margin-top: 16px;
+    padding: 11px 16px;
+    background-color: $colorWhite;
+}
+.p-couponEdit__status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:first-child) {
+        margin-top: 14px;
+    }
+}
+.p-couponEdit__status__name {
+    @extend  .u-fs-11, .u-fw-b;
+    color: $colorGray;
+}
+.p-couponEdit__status__count {
+    @extend  .u-fs-16, .u-lh-19;
+    color: $colorOrange;
+}
+.p-couponEdit__contents {
+    margin-top: 16px;
+    padding: 14px 16px 16px;
+    background-color: $colorWhite;
+}
+.p-couponEdit__heading {
+    @extend .u-fs-12;
+    margin-top: 16px;
+    padding: 0px 16px;
+    color: $colorThinGray;
+}
+.p-couponEdit__item {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #eee;
+    &:not(:first-child) {
+        margin-top: 10px;
+    }
+    &:last-child {
+        padding-bottom: 13px;
+    }
+}
+.p-couponEdit__item__heading {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-couponEdit__item__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-couponEdit__item__text {
+    @extend .u-fs-14;
+    margin-top: 3px;
+    width: 100%;
+}
+.p-couponEdit__item__colorTile {
+    @extend .u-fs-24;
+    width: 48px;
+    height: 48px;
+    padding: 6px 0;
+    border-radius: 2px;
+    border: 1px solid #eee;
+    background-color: $colorWhite;
+    text-align: center;
+}
+.p-couponEdit__form {
+    margin-top: 9px;
+}
+.p-couponEdit__form__input__wrap {
+    background-color: $colorWhite;
+}
+.p-couponEdit__form__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-couponEdit__form__state__radio__wrap  {
+    margin-top: 6px;
+}
+.p-couponEdit__form__state__radio__label {
+    label {
+        @extend .u-fs-14;
+        position: relative;
+        margin-right: 10px;
+        padding-left: 26px;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0px;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border: 2px solid $colorOrange;
+            border-radius: 50%;
+        }
+        &.is-check {
+            &::after{
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 4px;
+                transform: translateY(-50%);
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background-color: $colorOrange;
+            }
+        }
+    }
+    &:not(:first-child) {
+        margin-left: 28px;
+    }
+}
+.p-couponEdit__form__btn {
+    margin-top: 16px;
+}
+.p-couponEdit__delete__wrap {
+    padding: 36px 0 0;
+    text-align: center;
+}
+.p-couponEdit__delete {
+    @extend .u-fs-12;
+    color: $colorRed;
+}
+.p-couponEdit__overlay {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(#000, 0.6);
+}
+.p-couponEdit__modal {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 256px;
+    padding: 22px 24px 24px;
+    background-color: $colorWhite;
+}
+.p-couponEdit__modal__heading {
+    @extend .u-fs-14;
+    font-weight: 600;
+}
+.p-couponEdit__modal__text {
+    @extend .u-fs-12;
+    margin-top: 1px;
+    color: $colorGray;
+}
+.p-couponEdit__modal__btn__wrap {
+    display: flex;
+    margin-top: 13px;
+}
+.p-couponEdit__modal__btn {
+    &:not(:first-child) {
+        margin-left: 12px;
+    }
+}
+.p-couponEdit__modal__btn--retry {
+    height: 30px;
+    margin-top: 11px;
+}
+.p-couponEdit__modal__close {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    >span {
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 11px;
+        height: 0px;
+        border-bottom: 1px solid #ccc;
+        border-radius: 4px;
+        background-color: #ccc;
+        &:first-child {
+            transform: translate(-50%,-50%) rotate(45deg);
+        }
+        &:last-child {
+            transform: translate(-50%,-50%) rotate(-45deg);
+        }
+    }
+}

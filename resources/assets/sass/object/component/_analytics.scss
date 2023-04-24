@@ -1,0 +1,216 @@
+.c-analytics {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.c-analytics__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.c-analytics__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.c-analytics__tabs {
+    display: flex;
+    background-color: $colorWhite;
+}
+.c-analytics__tab {
+    width: 50%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    color: $colorGray;
+    &.is-active {
+        border-bottom: 2px solid $colorOrange;
+        color: $colorOrange;
+        font-weight: 600;
+    }
+}
+.c-analytics__tab__text {
+    @extend.u-fs-12;
+
+}
+.c-analytics__box {
+    padding: 16px 16px 13px;
+    background-color: $colorWhite;
+}
+.c-analytics__select__wrap {
+    @extend .u-fs-14;
+    position: relative;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+}
+.c-analytics__select {
+    min-width: 133px;
+    width: 100%;
+    padding: 8px 12px;
+}
+.c-analytics__form__reset {
+    @extend .u-fs-12;
+    position: relative;
+    left: 270px;
+    margin: 26px 0 16px;
+    color: $colorGray;
+    text-decoration:underline;
+}
+.c-analytics__text {
+    @extend .u-fs-15,.u-lh-18;
+    margin-top: 12px;
+}
+.c-analytics__link {
+    @extend .u-fs-12;
+    position: relative;
+    margin-top: 10px;
+    padding-left: 15px;
+    color: $colorBlue;
+    &::before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-image: url("/img/icon/icon_calendar.png");
+        background-size: contain;
+    }
+}
+.c-analytics__contents {
+    display: none;
+    margin-top: 24px;
+    &.is-active {
+        display: block;
+    }
+}
+.c-analytics__table {
+    display: block;
+    overflow-x: scroll;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    background-color: $colorWhite;
+}
+.c-analytics__table__thead {
+    @extend .u-fs-12;
+    border-bottom: 1px solid $colorBorder;
+    font-weight: 600;
+    color: $colorGray;
+    height: 36px;
+    >.c-analytics__table__tr {
+        height: 36px;
+    }
+}
+.c-analytics__table__tr {
+    &:not(:last-child) {
+        border-bottom: 1px solid #eee;
+    }
+    th,td {
+        max-width: 220px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding: 0 16px 0;
+        >a {
+            color: $colorBlue;
+        }
+    }
+    th + .c-analytics__filter__none{
+        &:not(:first-child) {
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 8px;
+                height: 13px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 5px;
+                padding: 1.5px 4px;
+                background-size: cover;
+            }
+        }
+    }
+    th + .c-analytics__filter__active {
+        &:not(:first-child) {
+            position: relative;
+            &::after {
+                content: "";
+                display: inline-block;
+                width: 9px;
+                height: 6px;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 3px;
+                padding: 1.5px 4px;
+                background-image: url("/img/common/triangle_bottom.png");
+                background-size: cover;
+            }
+        }
+    }
+}
+.c-analytics__table__tbody {
+    @extend .u-fs-12;
+    color: $colorGray;
+    >.c-analytics__table__tr {
+        height: 45px;
+    }
+}
+.c-analytics__table__tag {
+    padding: 4px 8px;
+    border-radius: 2px;
+    background-color: #eee;
+    color: $colorGray;
+    font-size: 12px;
+    line-height: 1.5;
+    &.is-active {
+        background-color: rgba($colorOrange, .1);
+        color: $colorOrange;
+    }
+}
+.c-analytics__pagenation__wrap {
+    margin-top: 16px;
+    padding: 0 16px;
+}
+.c-analytics__pagenation {
+    @extend .u-fs-15, .u-lh-18;
+    display: flex;
+    border: 1px solid $colorOrange;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    color: $colorOrange;
+}
+.c-analytics__pagenation__left {
+    width: 28%;
+    padding: 11px 0;
+    border-right: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
+.c-analytics__pagenation__center {
+    width: 44%;
+    padding: 11px 0;
+    text-align: center;
+}
+.c-analytics__pagenation__right {
+    width: 28%;
+    padding: 11px 0;
+    border-left: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}

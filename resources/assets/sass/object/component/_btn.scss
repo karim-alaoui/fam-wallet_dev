@@ -1,0 +1,132 @@
+.c-btn--orange {
+    @extend .u-fs-12;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    background-color: $colorOrange;
+    color: $colorWhite;
+    cursor: pointer;
+    text-align: center;
+    >a,p{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.c-btn--coupon__orange {
+    @extend .u-fs-12;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    background-color: $colorOrange;
+    color: $colorWhite;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 10px;
+    >a,p{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.c-btn--signin__orange {
+    @extend .u-fs-12;
+    width: 100%;
+    height: 40px;
+    border-radius: 2px;
+    background-color: #FD822D;
+    color: $colorWhite;
+    cursor: pointer;
+    text-align: center;
+    >a{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.c-btn--white {
+    @extend .u-fs-12;
+    width: 100%;
+    height: 40px;
+    border: 1px solid $colorOrange;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    color: $colorOrange;
+    cursor: pointer;
+    text-align: center;
+    >a{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.c-btn--gray {
+    @extend .u-fs-12;
+    width: 90%;
+    height: 30px;
+    border-radius: 2px;
+    background-color: #ccc;
+    color: $colorGray;
+    cursor: pointer;
+    text-align: center;
+    >a{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.c-btn--red {
+    @extend .u-fs-12;
+    width: 90%;
+    height: 30px;
+    border-radius: 2px;
+    background-color: $colorRed;
+    color: $colorWhite;
+    cursor: pointer;
+    text-align: center;
+    >a{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+.c-btn--modal--orange {
+    @extend .u-fs-12;
+    width: 90%;
+    border-radius: 2px;
+    background-color: $colorOrange;
+    color: $colorWhite;
+    cursor: pointer;
+    text-align: center;
+    padding-top: 8px;
+    >a,p{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}
+
+.c-btn--modal--white--orange {
+    @extend .u-fs-12;
+    width: 90%;
+    height: 30px;
+    border-radius: 2px;
+    border: 1px solid $colorOrange;
+    background-color: $colorWhite;
+    color: $colorOrange;
+    cursor: pointer;
+    text-align: center;
+    >a,p{
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+        display: inline-block;
+    }
+}

@@ -1,0 +1,59 @@
+.p-userManagement {
+    min-height: calc(100vh - 400px);
+    background-color: $colorBg;
+}
+.p-userManagement__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-userManagement__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-userManagement__contents {
+    margin-top: 24px;
+}
+.p-userManagement__list {
+    &:not(:first-child) {
+        margin-top: 9px;
+    }
+}
+.p-userManagement__listItem {
+    @extend .u-fs-12;
+    position: relative;
+    background-color: $colorWhite;
+    &:not(:last-child) {
+        border-bottom: 1px solid $colorBg;
+    }
+    >a {
+        display: inline-block;
+        width: 100%;
+        padding: 13.5px;
+    }
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        background-image: url("/img/common/arrow-right.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
+.p-userManagement__link {
+    @extend .u-fs-12;
+    margin-top: 24px;
+    background-color: $colorWhite;
+    >a {
+        display: inline-block;
+        width: 100%;
+        padding: 13px;
+        color: $colorBlue;
+        text-align: center;
+
+    }
+}

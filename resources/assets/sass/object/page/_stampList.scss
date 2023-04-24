@@ -1,0 +1,221 @@
+.p-stampList {
+    min-height: calc(100vh - 80px);
+    background-color: $colorBg;
+}
+.p-stampList__title__wrap {
+    padding: 13px 0;
+    background-color: $colorWhite;
+}
+.p-stampList__title {
+    @extend .u-fs-14;
+    text-align: center;
+}
+.p-stampList__contents {
+    padding: 16px 0 0;
+}
+.p-stampList__text {
+    @extend .u-fs-12;
+}
+.p-stampList__btn {
+    padding: 0 16px;
+}
+.p-stampList__btn__wrap {
+    padding: 13px 0;
+    border-radius: 10px;
+    background-color: $colorWhite;
+    box-shadow: 0 0 10px 0 rgba(0,0,0,0.1);
+    &:not(:first-child) {
+        margin-top: 8px;
+    }
+    >a {
+        display: inline-block;
+        width: 100%;
+    }
+}
+.p-stampList__btn__text {
+    @extend .u-fs-14;
+    position: relative;
+    text-align: center;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        left: 16px;
+        width: 32px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+    }
+}
+.p-stampList__btn__img--stamp {
+    &::after {
+        top: 50%;
+        transform: translateY(-54%);
+        height: 32px;
+        background-image: url("/img/icon/icon_stampcard.png");
+    }
+}
+.p-stampList__btn__img--analytics {
+    &::after {
+        height: 21px;
+        background-image: url("/img/icon/icon_analytics.png");
+    }
+}
+.p-stampList__input__wrap {
+    padding: 0 16px;
+    &:not(:first-child) {
+        margin-top: 22px;
+    }
+}
+.p-stampList__label {
+    @extend .u-fs-11;
+    color: $colorGray;
+}
+.p-stampList__select__wrap {
+    position: relative;
+    margin-top: 9px;
+    border: 1px solid $colorBorder;
+    background-color: $colorWhite;
+    &::after {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        transform: translateY(-50%);
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 4px 0 4px;
+        border-color: #ccc transparent transparent transparent;
+        pointer-events: none;
+    }
+}
+.p-stampList__select {
+    @extend .u-fs-14;
+    display: inline-block;
+    width: 100%;
+    padding: 9px 12px;
+
+}
+.p-stampList__stamp__tabs {
+    display: flex;
+}
+.p-stampList__stamp__tab {
+    width: 50%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+    &.is-active {
+        border-bottom: 2px solid $colorOrange;
+        color: $colorOrange;
+    }
+}
+.p-stampList__stamp__tab__text {
+    @extend.u-fs-12;
+    font-weight: 600;
+    >span {
+        font-weight: 300;
+    }
+}
+.p-stampList__stamp__list__wrap {
+    padding: 16px;
+}
+.p-stampList__stamp__list {
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+.p-stampList__card {
+    margin-bottom: 5px;
+    &:not(:first-child) {
+        margin-top: 4px;
+    }
+}
+.p-stampList__card__top {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: rgba($colorOrange, 0.2);
+}
+.p-stampList__card__img {
+    width: 32px;
+}
+.p-stampList__card__top__wrap {
+    margin-left: 8px;
+
+}
+.p-stampList__card__shop {
+    @extend .u-fs-13, .u-lh-16, .u-fw-b;
+}
+.p-stampList__card__date {
+    @extend .u-fs-10, .u-lh-13;
+    color: $colorThinGray;
+}
+.p-stampList__card__bottom {
+    padding: 5px 12px;
+    margin-bottom: 5px;
+    background-color: rgba($colorYellow, 0.1);
+}
+.p-stampList__card__dl {
+    @extend .u-fs-16, .u-lh-19;
+    color: $colorRed;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    >span {
+        @extend .u-fs-11;
+    }
+}
+.p-stampList__stamp__list__text__wrap {
+    display: none;
+    &.is-active {
+        display: block;
+    }
+}
+.p-stampList__stamp__list__text {
+    @extend .u-fs-12, .u-lh-19;
+}
+.p-stampList__stamp__pagenation__wrap {
+    padding: 0 16px;
+}
+.p-stampList__stamp__pagenation {
+    @extend .u-fs-15, .u-lh-18;
+    display: flex;
+    border: 1px solid $colorOrange;
+    border-radius: 2px;
+    background-color: $colorWhite;
+    color: $colorOrange;
+}
+.p-stampList__stamp__pagenation__left {
+    width: 28%;
+    padding: 11px 0;
+    border-right: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
+.p-stampList__stamp__pagenation__center {
+    width: 44%;
+    padding: 11px 0;
+    text-align: center;
+    > li {
+        display: inline-block;
+        width: 30px;
+        &:not(:first-child):not(:last-child) {
+            padding-top: 1px;
+        }
+    }
+    &.active,
+    &.disabled,
+    &.ellipsis {
+      color: #a4a9aa;
+    }
+}
+.p-stampList__stamp__pagenation__right {
+    width: 28%;
+    padding: 11px 0;
+    border-left: 1px solid $colorOrange;
+    text-align: center;
+    cursor: pointer;
+}
